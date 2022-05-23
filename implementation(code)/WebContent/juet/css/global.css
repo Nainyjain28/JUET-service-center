@@ -1,0 +1,8 @@
+.bg{background: url('../image/jaypee8.jpg')no-repeat;width:100%;height:100vh;}
+.form-container{border:0px solid #fff;padding:50px 60px;margin-top:20vh;height:300px;width:350px;margin:0 auto;
+-webkit-box-shadow: 10px 10px 26px 11px rgba(0,0,0,0.75);
+
+-moz-box-shadow: 10px 10px 26px 11px rgba(0,0,0,0.75);
+
+box-shadow: 10px 10px 26px 11px rgba(0,0,0,0.75);
+}

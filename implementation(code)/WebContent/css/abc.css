@@ -1,0 +1,6 @@
+.bg{background:linear-gradient(to bottom right, #000066 21%, #ff99cc 100%);width:100%;height:100vh;}
+.form-container{padding:50px 60px;margin-top:20vh;height:350px;width:300px;margin:0 auto;
+-webkit-box-shadow: 7px 7px 16px 2px rgba(0,0,0,0.75);
+-moz-box-shadow: 7px 7px 16px 2px rgba(0,0,0,0.75);
+box-shadow: 7px 7px 16px 2px rgba(0,0,0,0.75);
+}

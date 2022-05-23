@@ -1,0 +1,29 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>feedback</title>
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+<form action="feedback.jsp">
+
+<br>
+  <label for="comment" ><font size="20" color="black" ><center>FEEDBACK</center></font></label><br>
+  <center><textarea name="feed" class="form-control" style="font-size:18px"  rows="10" cols="60" id="comment" placeholder="Write your Comment here....."></textarea></center>
+<br>
+
+<div class="rating">
+    
+    <input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="Rocks!" style="font-size:500%"> &bigstar;</label>
+    <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="Pretty good" style="font-size:500%">&bigstar;</label>
+    <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="okay" style="font-size:500%">&bigstar;</label>
+    <input type="radio" id="star2" name="rating" value="2" /><label for="star2" title="Kinda bad" style="font-size:500%">&bigstar;</label>
+    <input type="radio" id="star1" name="rating" value="1" /><label for="star1" title="very bad" style="font-size:500%">&bigstar;</label>
+</div>
+
+<center><br><br><br><br><br><br><input type="submit" value="SUBMIT"></center>
+
+</form>
+</body>
+</html>

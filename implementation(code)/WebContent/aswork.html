@@ -1,0 +1,261 @@
+<html>
+<head><title>
+JUET service centre
+</title>
+<script type="text/javascript">
+function populate(s1,s2,s3){
+var s1 = document.getElementById(s1);
+var s2 = document.getElementById(s2);
+var s3 = document.getElementById(s3);
+s2.innerHTML = "";
+
+if(s1.value == "electricity"){
+  var optionArray=["|","ram|Ram","raju|Raju","mohan|Mohan","babulal|Babulal"];
+  }
+else if(s1.value == "furniture"){
+  var optionArray=["|","mohan|Mohan","babulal|Babulal"];
+  }
+else if(s1.value == "room_service"){
+  var optionArray=["|","ramkali|Ramkali","sudha|Sudha"];
+  }
+else if(s1.value == "plumber"){
+  var optionArray=["|","vijay|Vijay","jai|Jai"];
+  }
+else if(s1.value == "lan"){
+  var optionArray=["|","Rajiv|Rajiv","rohan|Rohan"];
+  }
+else{}
+for(var option in optionArray){
+var pair = optionArray[option].split("|");
+var newOption = document.createElement("option");
+newOption.value = pair[0];
+newOption.innerHTML=pair[1];
+s2.options.add(newOption);
+}
+s3.innerHTML = "";
+if(s1.value == "electricity"){
+  var optionArray=["|","Fan|Fan","Tl|Tubelight","Socket|Socket","watercooler|Water Cooler","mcb|MCB",,"tablelamp|Table Lamp"];
+  }
+else if(s1.value == "furniture"){
+  var optionArray=["|","table|Table","Bed|Bed","chair|Chair","mattress|Mattress","almirah|Almirah","windowpane|Window pane","bookshelf|Book Shelf","gate|Door Latch/handle","curtain|Curtain rod"];
+  }
+else if(s1.value == "room_service"){
+  var optionArray=["|","sweeping|sweeping","Bed|Bed"];
+  }
+else if(s1.value == "plumber"){
+  var optionArray=["|","tap|Tap","shower|Shower","washbasin|Wash Basin pipe"];
+  }
+else if(s1.value == "lan"){
+  var optionArray=["lan|LAN"];
+  }
+else{}
+for(var option in optionArray){
+var pair = optionArray[option].split("|");
+var newOption = document.createElement("option");
+newOption.value = pair[0];
+newOption.innerHTML=pair[1];
+s3.options.add(newOption);
+}
+}
+</script>
+</head>
+<style>
+body{
+margin:0;
+
+}
+#main{
+height:660px;
+width:1347px;
+background: linear-gradient(to right, #c1c161 0% , #C1c161 0% , #d4d4b1 100% ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+ul
+{
+margin:0px;
+padding:0px;
+list-style:none;
+}
+ul li {
+float:left;
+width:300px;
+height:60px;
+background-color:black;
+opacity:.8;
+line-height:40px;
+text-align:center;
+font-size:22px;
+margin-right:2px;
+}
+ul li a {
+text-decoration:none;
+color:white;
+display:block;
+}
+ul li a:hover{
+background-color:green;
+}
+ul li ul li{
+display:none;
+}
+ul li:hover ul li{
+display:block;
+}
+
+
+
+#info{
+width:600px;
+height:400px;
+margin-right:auto;
+margin-left:auto;
+padding-top:80px;;
+}
+table{
+padding:45px;
+border-spacing:6px 6px;
+}
+
+fieldset{
+border: 2px solid green;
+}
+legend {
+    display: block;
+    padding-left: 2px;
+    padding-right: 2px;
+    font-family:verdana;
+    font-size:27pt;
+    text-align:center;
+    border:1px solid green;
+border-radius:10px
+}
+td{
+font-family:Arial;
+font-size:14pt;
+}
+input[type=submit]{
+padding: 18px 40px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color:black;
+  opacity:.8;
+  color:white;
+ font-size:12pt;
+}
+input[type=submit]:hover{
+background-color:green;
+  
+}
+#right{
+width:300px;
+height:60px;
+position: fixed;
+right:35px;
+top:0px;
+}
+#box{
+position: fixed;
+right:35px;
+height:60px;
+width:250px;
+bottom:35px;
+display:block;
+}
+button{
+background-color:black;
+opacity:.8;
+line-height:40px;
+text-align:center;
+font-size:22px;
+text-decoration:none;
+display:block;
+height:60px;
+border:none;
+width:200px;
+}
+button:hover{
+display:block;
+background-color:green;
+height:60px;
+
+}
+button a{
+color:white;
+font-family:bondimt;
+text-align:center;
+margin-bottom:25px;
+}
+#b1{
+width:50px;
+height:60px;
+float:left;
+}
+#b2{
+width:200px;
+height:60px;
+float:left;
+}
+</style>
+<body>
+<div id="main">
+<div id="bar">
+<ul>
+<li><a href="aswork.html">Assign Worker</a></li>
+<li><b><a  href="showcom.jsp">Complaint</b></a></li>
+<li><a href="#">Complaint Search</a>
+
+<ul>
+<li><a href="serst.html">Student</a></li>
+<li><a href="serty.html">Work Type</a></li>
+<li><a href="serco.html">Complaint</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div id="right">
+<ul>
+<li><a href="#"><b>Settings</b></a>
+<ul>
+<li><a href="passad.html"><b>Changed password<b/></a></li>
+<li><a href="logout.jsp"><b>Logout</b></a></li>
+</ul>
+</li>
+</ul> 
+</div>
+<div id="info">
+<form action="asworker.jsp">
+<fieldset>
+<table align="center">
+<legend >Assign Worker</legend>
+<tr><td><label for="describe"><b>Complaint ID</label></td>
+<td><input type="number" id="enroll" placeholder="Complaint Id" style="font-size:12pt" name="cid"></td></tr>
+<tr><td height="50"><b>Work Type</b></td><td><select id="slc1" onchange="populate(this.id,'slc2','slc3')" name="slc1"  style=' width: 150px; height:30px; font-size:15px'>
+<option value="">select</option>
+<option value="electricity">Electrician</option>
+<option value="furniture">Carpenter</option>
+<option value="room_service">room_Service</option>
+<option value="plumber">Plumber</option>
+<option value="lan">Lan</option>
+</select>
+</td></tr>
+<tr><td height="50"><b>Worker name</b></td><td><select id="slc2" name="slc2"  style=' width: 150px; height:30px; font-size:15px'></select>
+</td></tr>
+</td></tr>
+<tr><td height="50"><b>Work</b></td><td><select id="slc3" name="slc3"  style=' width: 150px; height:30px; font-size:15px'></select>
+</td></tr>
+</table>
+<center>
+<input type="submit" value="Submit">
+</center>
+</fieldset>
+</form>
+</div>
+<div id="box">
+<div id="b1"><img src="fd.jpg" height="60"></div>
+<div id="b2"><button><a href="fdback.jsp"><b>Feedback</b></a></button>
+</div>
+
+</div>
+</body>
+</html>

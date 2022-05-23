@@ -1,0 +1,153 @@
+<html>
+<head><title>
+JUET service centre
+</title>
+<script type="text/javascript">
+function populate(s1,s2){
+var s1 = document.getElementById(s1);
+var s2 = document.getElementById(s2);
+s2.innerHTML = "";
+if(s1.value == "Electricity"){
+  var optionArray=["|","Fan|Fan","Tl|Tubelight","Socket|Socket"];
+  }
+else if(s1.value == "Furniture"){
+  var optionArray=["|","table|Table","Bed|Bed","chair|Chair","mattress|Mattress"];
+  }
+else if(s1.value == "room_Service"){
+  var optionArray=["|","sweeping|sweeping","Bed|Bed","chair|Chair","mattress|Mattress"];
+  }
+else{}
+for(var option in optionArray){
+var pair = optionArray[option].split("|");
+var newOption = document.createElement("option");
+newOption.value = pair[0];
+newOption.innerHTML=pair[1];
+s2.options.add(newOption);
+}
+}
+</script>
+</head>
+<style>
+body{
+margin:0;
+
+}
+#main{
+height:660px;
+width:1347px;
+background: linear-gradient(to right, #c1c161 0% , #C1c161 0% , #d4d4b1 100% ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+ul
+{
+margin:0px;
+padding:0px;
+list-style:none;
+}
+ul li {
+float:left;
+width:300px;
+height:60px;
+background-color:black;
+opacity:.8;
+line-height:40px;
+text-align:center;
+font-size:22px;
+margin-right:2px;
+}
+ul li a {
+text-decoration:none;
+color:white;
+display:block;
+height:60px;
+}
+ul li a:hover{
+background-color:green;
+height:60px;
+}
+ul li ul li{
+display:none;
+}
+ul li:hover ul li{
+display:block;
+}
+
+#info{
+width:600px;
+height:400px;
+margin-right:auto;
+margin-left:auto;
+padding-top:80px;;
+}
+table{
+padding:45px;
+border-spacing:6px 6px;
+}
+
+fieldset{
+border: 2px solid orange;
+}
+legend {
+    display: block;
+    padding-left: 2px;
+    padding-right: 2px;
+    font-family:verdana;
+    font-size:27pt;
+    text-align:center;
+}
+td{
+font-family:Arial;
+font-size:14pt;
+}
+input[type=submit]{
+padding: 18px 40px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color:black;
+  opacity:.8;
+  color:white;
+ font-size:12pt;
+}
+input[type=submit]:hover{
+background-color:green;
+  
+}
+</style>
+<body>
+<div id="main">
+<div id="bar">
+<ul>
+<li><a href="#">Personal Information</a></li>
+<li><a href="#">Complaint Register</a></li>
+<li><a href="#">Old Complaint</a>
+</li>
+</ul>
+</div>
+<div id="info">
+<form action="">
+<fieldset>
+<table align="center">
+<legend >!!Register Complaint!!</legend>
+
+<tr><td height="50"><b>Complaint Type</b></td><td><select id="slc1" onchange="populate(this.id,'slc2')" name="slc1"  style=' width: 150px; height:30px; font-size:15px'>
+<option value="">select</option>
+<option value="Electricity">Electricity</option>
+<option value="Furniture">Furniture</option>
+<option value="room_Service">room_Service</option>
+</select>
+</td></tr>
+<tr><td height="50"><b>Complaint</b></td><td><select id="slc2" name="slc2"  style=' width: 150px; height:30px; font-size:15px'></select>
+</td></tr>
+<tr><td><label for="describe"><b>Describe Complaint</label></td>
+<td><textarea class="form-control" style="font-size:15px"  rows="5" cols="20" id="describe"></textarea></tr></td>
+</table>
+<center>
+<input type="submit" value="Submit">
+</center>
+</fieldset>
+</form>
+</div>
+</div>
+</body>
+</html>

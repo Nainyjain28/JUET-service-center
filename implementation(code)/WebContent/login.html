@@ -1,0 +1,110 @@
+<html>
+<title>
+JUET service centre
+</title>
+<style>
+body{
+margin:0;
+background: linear-gradient(to right, #c1c161 0% , #C1c161 0% , #d4d4b1 100% ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+h1{
+font-family:Forte;
+text-align:center;
+color:green;
+text-size:50px;
+}
+hr{
+border:0.5px solid green;
+}
+label{
+font-size:18pt;
+font-family:timesnewroman;
+font-weight:bold;
+color:black;
+}
+input[type=submit]{
+  padding: 18px 40px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color:black;
+  opacity:.8;
+letter-spacing:1px;
+  color:white;
+   font-size:12pt;
+   
+}
+input[type=submit]:hover{
+background-color:green;
+}
+fieldset{
+border: 2px solid green;
+border-radius:15px;
+width:600px;
+height:220px;
+box-shadow:0 0 20px green;
+margin:auto;
+}
+input[type=password]{
+padding:5px 30px;
+border:none;
+}
+input[type=text]{
+padding:5px 30px;
+border:none;
+}
+select{
+padding:5px 30px;
+border:none;
+}
+</style>
+<body>
+<center>
+<h1>!! Juet Service Centre !!</h1>
+<img src="logo.jpg" height="200">
+</center>
+<hr>
+<br>
+<form action="chklogin.jsp">
+<fieldset>
+<br>
+<table align="center">
+<tr><td>
+<label>Member Type</font></label>
+</td>
+<td>
+<select name="member">
+   <option value="Student">Student</option>
+   <option value="Admin">Admin</option>
+   <option value="Worker">Worker</option>
+</select>
+</td></tr>
+<tr><td>
+<label >User Id:</label>
+</td>
+<td>
+<input type=text name=uid required>
+</td>
+</tr>
+
+<tr><td>
+<label>Password:</label>
+</td>
+<td>
+<input type=password name=pwd required>
+</td>
+</tr>
+
+</tr>
+<tr><td>
+</table>
+<br>
+
+<center>
+<input type="submit" value="Login" >
+</center>
+
+</fieldset>
+</form>
+</body>
+</html>
